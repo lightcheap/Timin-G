@@ -11,7 +11,120 @@
     --border-indicator-width: 20px * 1.6;
 }
 
+/* 基本設定 */
+li ol {
+    list-style: none;
+}
+
 body {
     background-color: rgba(51, 51, 51, 1);
     font-family: Arial, Helvetica, sans-serif;
+}
+
+h1 {
+    color: #a7a7a7;
+    transition: all 1.2s;
+}
+
+h1:hover {
+    cursor: pointer;
+    color: rgba(230, 230, 200, 1);
+    text-shadow: 0 0 10px rgba(252, 252, 162, 1);
+}
+
+h3 {
+    font-size: 0.2em;
+    color: rgba(56, 60, 64, 0.92);
+}
+
+.container {
+    width: var(--container-width);
+    height: var(--container-height);
+    margin: 50px auto;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+.container-2 {
+    width: var(--container-width);
+    height: var(--container-height);
+    margin: 20px auto;
+    padding-top: 100px;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+.page {
+    height: var(--container-height) / 4;
+    display: flex;
+    flex-basis: var(--container-width) / 2;
+    position: relative;
+}
+
+ol:not(.ol-4) {
+    padding: 0;
+    margin: auto;
+    position: relative;
+}
+
+.circle {
+    width: var(--circle-width);
+    height: var(--circle-width);
+    display: inline-block;
+    border-radius: 50%;
+    margin: var(--circle-width) /2 - 2px;
+}
+
+.circle-bordered {
+    width: var(--circle-width);
+    height: var(--circle-width);
+    position: relative;
+    box-shadow: 0 0 0 1px #a7a7a7;
+}
+
+.circle-bordered::after {
+    position: absolute;
+    left: var(--circle-width) / 2;
+    top: var(--circle-width) / 2;
+    border-radius: 50%;
+    content: '';
+}
+
+.circle-indicator {
+    background-color: rgba(243, 242, 242, 0.966);
+    position: absolute;
+}
+
+@keyframes one {
+    from {
+        left: 0;
+    }
+    20% {
+        left: 0;
+        width: var(--circle-width);
+    }
+    30% {
+        width: var(--circle-width) * var(--one-width-multiplier);
+        left: var(--circle-width);
+    }
+    40% {
+        width: var(--circle-width);
+        left: var(--circle-width) * 2;
+    }
+    60% {
+        width: var(--circle-width);
+        left: var(--circle-width) * 2;
+    }
+    70% {
+        width: var(--circle-width) * var(--one-width-multiplier);
+        left: var(--circle-width) * 3;
+    }
+    80% {
+        width: var(--circle-width);
+        left: var(--circle-width) * 4;
+    }
+    to {
+        width: var(--circle-width);
+        left: var(--circle-width) * 4;
+    }
 }
