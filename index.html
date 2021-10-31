@@ -32,6 +32,22 @@
     <body>
         <!-- コンテンツ -->
         <div class="pure-container" data-effect="pure-effect-scaleRotate" id="">
+            <input type="checkbox" id="pure-toggle-left" class="pure-toggle" data-toggle="left"/>
+            <label class="pure-toggle-label" for="pure-toggle-left" data-toggle-label="left">
+                <span class="g"><h1>Timin-G</h1></span>
+            </label>
+            <!-- ここがドロワーメニュー -->
+            <nav class="pure-drawer" data-position="left">
+                <ul id ="gloval1"class="listmenu">
+                    <li id = "li" onclick = "soundselect1()">Sound 1</li>
+                    <li onclick = "soundselect2()">Sound 2</li>
+                    <li onclick = "soundselect3()">Sound 3</li>
+                    <li onclick = "soundselect4()">Sound 4</li>
+                    <li onclick = "soundselect5()">Sound 5※注意</li>
+                </ul>
+                <a class = "author" href ="https://twitter.com/Exactly_Good?lang=ja" target = "_blank">Created by @Exactly_Good ...</a>
+            </nav>
+            <!-- ドロワーメニュー  end-->
 
         </div>
         <script src="js/clock.js"></script>
